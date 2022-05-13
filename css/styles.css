@@ -1,0 +1,99 @@
+:root {
+    /* Polar Night */
+    --first-dark: #2e3440;
+    --first-dark-transparent: #2e3440CC;
+    --second-dark: #3b4252;
+    --third-dark: #434c5e;
+    --fourth-dark: #4c566a;
+
+    /* Snow Storm */
+    --first-light: #d8dee9;
+    --second-light: #e5e9f0;
+    --third-light: #eceff4;
+
+    /* Link Orande */
+    --link-orange: #d08770;
+
+    /* Background Colors */
+    --background-dark: #1A1D24;
+}
+
+
+html {
+    /* Box sizing to total values set, not added after the fact */
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    /* Use box sizing for all */
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    width: 100vw;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    height: 10vh;
+}
+
+header h1 {
+    margin: auto;
+}
+
+#comp-side {
+    height: 30vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+.divider {
+    height: 5vh;
+}
+
+#player-side {
+    height: 30vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+#player-choice {
+    display: flex;
+    height: 15vh;
+    gap: 25px;
+}
+
+#rock {
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+#paper {
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
+
+#scissors {
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+}
