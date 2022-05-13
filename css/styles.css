@@ -24,7 +24,9 @@ html {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     /* Use box sizing for all */
     box-sizing: inherit;
 }
@@ -61,10 +63,17 @@ header h1 {
 }
 
 #comp-side {
+    display: flex;
     height: 30vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: var(--fourth-dark);
+    justify-content: center;
+}
+
+.compSelectImage {
+    max-height: 30vh;
+    margin: auto;
 }
 
 .divider {
@@ -72,10 +81,31 @@ header h1 {
 }
 
 #player-side {
+    display: flex;
     height: 30vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: var(--fourth-dark);
+}
+
+.player-selection-rock {
+    display: flex;
+    margin: auto;
+}
+
+.player-selection-paper {
+    display: flex;
+    margin: auto;
+}
+
+.player-selection-scissors {
+    display: flex;
+    margin: auto;
+}
+
+.playerSelectImage {
+    max-height: 30vh;
+    margin: auto;
 }
 
 #player-choice {
@@ -85,22 +115,40 @@ header h1 {
 }
 
 #rock {
-    flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: var(--fourth-dark);
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+#rock img {
+    max-height: 15vh;
 }
 
 #paper {
-    flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: var(--fourth-dark);
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+#paper img {
+    max-height: 15vh;
 }
 
 #scissors {
-    flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
     background-color: var(--fourth-dark);
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+#scissors img {
+    max-height: 15vh;
 }
