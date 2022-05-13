@@ -40,6 +40,8 @@ body {
     flex-direction: column;
     align-items: center;
     height: 100vh;
+    background-color: var(--background-dark);
+    color: var(--first-light);
 }
 
 #container {
@@ -62,6 +64,7 @@ header h1 {
     height: 30vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: var(--fourth-dark);
 }
 
 .divider {
@@ -72,6 +75,7 @@ header h1 {
     height: 30vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: var(--fourth-dark);
 }
 
 #player-choice {
@@ -84,16 +88,19 @@ header h1 {
     flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: var(--fourth-dark);
 }
 
 #paper {
     flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: var(--fourth-dark);
 }
 
 #scissors {
     flex: 1;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    background-color: var(--fourth-dark);
 }
