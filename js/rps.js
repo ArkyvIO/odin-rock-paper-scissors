@@ -230,7 +230,7 @@ function closeGame() {
 };
 
 function reset() {
-    $('#end').hide('fast', function() {
+    $('#end').hide('fast', function () {
         $('#container').slideDown('fast');
         hideForGame();
         $('p#results').text('');

@@ -125,6 +125,11 @@ header h1 {
     display: flex;
     justify-content: center;
     flex: 1;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+}
+
+#rock:hover {
+    transform: scale(1.1);
 }
 
 #rock img {
@@ -138,6 +143,11 @@ header h1 {
     display: flex;
     justify-content: center;
     flex: 1;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+}
+
+#paper:hover {
+    transform: scale(1.1);
 }
 
 #paper img {
@@ -151,6 +161,11 @@ header h1 {
     display: flex;
     justify-content: center;
     flex: 1;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+}
+
+#scissors:hover {
+    transform: scale(1.1);
 }
 
 #scissors img {
@@ -177,7 +192,8 @@ header h1 {
     height: 25vh;
 }
 
-#endWinner, #endScore {
+#endWinner,
+#endScore {
     text-align: center;
     margin: auto;
 }
@@ -189,4 +205,9 @@ header h1 {
     padding: 25px;
     border: 3px solid var(--fourth-dark);
     border-radius: 10px;
+    transition: all 400ms cubic-bezier(.47, 1.64, .41, .8);
+}
+
+#startOver:hover {
+    transform: scale(1.1);
 }
