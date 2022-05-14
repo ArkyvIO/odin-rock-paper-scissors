@@ -10,33 +10,58 @@ let shown = '';
 let compShown = '';
 let playerSelection = '';
 let compSelection = '';
+let click = 0;
 
 $(document).ready(function () {
 
-    hideAll();
+    hideForGame();
 
     $('#rock').click(function () {
-        playerSelection = '.player-selection-rock';
-        selectRPS(shown, playerSelection);
-        shown = playerSelection;
-        compSelection = computerPlay();
-        singleRound(playerSelection, compSelection);
+        if (click == 0) {
+            click = 1;
+            if (playerScore < 5 && compScore < 5) {
+                playerSelection = '.player-selection-rock';
+                selectRPS(shown, playerSelection);
+                shown = playerSelection;
+                compSelection = computerPlay();
+                singleRound(playerSelection, compSelection);
+            }
+            setTimeout(function () {
+                click = 0;
+            }, 1500);
+        }
     });
 
     $('#paper').click(function () {
-        playerSelection = '.player-selection-paper';
-        selectRPS(shown, playerSelection);
-        shown = playerSelection;
-        compSelection = computerPlay();
-        singleRound(playerSelection, compSelection);
+        if (click == 0) {
+            click = 1;
+            if (playerScore < 5 && compScore < 5) {
+                playerSelection = '.player-selection-paper';
+                selectRPS(shown, playerSelection);
+                shown = playerSelection;
+                compSelection = computerPlay();
+                singleRound(playerSelection, compSelection);
+            }
+            setTimeout(function () {
+                click = 0;
+            }, 1500);
+        }
     });
 
     $('#scissors').click(function () {
-        playerSelection = '.player-selection-scissors';
-        selectRPS(shown, playerSelection);
-        shown = playerSelection;
-        compSelection = computerPlay();
-        singleRound(playerSelection, compSelection);
+        if (click == 0) {
+            click = 1;
+            if (playerScore < 5 && compScore < 5) {
+                playerSelection = '.player-selection-scissors';
+                selectRPS(shown, playerSelection);
+                shown = playerSelection;
+                compSelection = computerPlay();
+                singleRound(playerSelection, compSelection);
+            }
+            setTimeout(function () {
+                click = 0;
+            }, 1500);
+        }
     });
 
 });
@@ -53,7 +78,7 @@ function selectRPS(s, t) {
 };
 
 // Hide all selections until needed
-function hideAll() {
+function hideForGame() {
     $('.player-selection-rock').hide();
     $('.player-selection-paper').hide();
     $('.player-selection-scissors').hide();
@@ -142,7 +167,8 @@ function singleRound(p, c) {
             setTimeout(function () {
                 $('p#results').text('COMPUTER SCORE');
                 $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
-            }, 1100);        };
+            }, 1100);
+        };
     };
 
     if (p == '.player-selection-scissors') {
@@ -164,5 +190,11 @@ function singleRound(p, c) {
                 $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         };
+    };
+};
+
+function checkGame(ps, cp) {
+    if (ps == 5 || cp == 5) {
+
     };
 };
