@@ -53,6 +53,10 @@ body {
     height: 100vh;
 }
 
+.divider {
+    display: flex;
+}
+
 header {
     display: flex;
     height: 10vh;
@@ -151,4 +155,16 @@ header h1 {
 
 #scissors img {
     max-height: 15vh;
+}
+
+#results {
+    color: var(--first-light);
+    text-align: center;
+    margin: auto;
+}
+
+#score {
+    color: var(--first-light);
+    text-align: center;
+    margin: auto;
 }
