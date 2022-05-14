@@ -108,16 +108,19 @@ function singleRound(p, c) {
         if (c == '.comp-selection-rock') {
             setTimeout(function () {
                 $('p#results').text('TIE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         } else if (c == '.comp-selection-paper') {
             compScore++;
             setTimeout(function () {
                 $('p#results').text('COMPUTER SCORE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         } else if (c == '.comp-selection-scissors') {
             playerScore++;
             setTimeout(function () {
                 $('p#results').text('YOU SCORE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         };
     };
@@ -127,15 +130,18 @@ function singleRound(p, c) {
             playerScore++;
             setTimeout(function () {
                 $('p#results').text('YOU SCORE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         } else if (c == '.comp-selection-paper') {
             setTimeout(function () {
                 $('p#results').text('TIE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         } else if (c == '.comp-selection-scissors') {
             compScore++;
             setTimeout(function () {
                 $('p#results').text('COMPUTER SCORE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);        };
     };
 
@@ -144,15 +150,18 @@ function singleRound(p, c) {
             compScore++;
             setTimeout(function () {
                 $('p#results').text('COMPUTER SCORE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         } else if (c == '.comp-selection-paper') {
             playerScore++;
             setTimeout(function () {
                 $('p#results').text('YOU SCORE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         } else if (c == '.comp-selection-scissors') {
             setTimeout(function () {
                 $('p#results').text('TIE');
+                $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
         };
     };
