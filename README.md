@@ -3,6 +3,10 @@ The Odin Project - Rock, Paper, Scissors
 ## Project
 This is the third assignment of "The Odin Project"
 ## Learned (or practiced)
-- TBA
+- JQuery Selectors for children.
+- Variable incrementation.
+- Custom slides using JQuery UI
+- Debugging process.
+- Input validation.
 ## To-Do
-- TBA
+- Make animations smoother for end screen.
