@@ -11,10 +11,23 @@ let compShown = '';
 let playerSelection = '';
 let compSelection = '';
 let click = 0;
+let winner = '';
 
 $(document).ready(function () {
 
     hideForGame();
+
+    $('#end').click(function () {
+        compScore = 0;
+        playerScore = 0;
+        shown = '';
+        compShown = '';
+        playerSelection = '';
+        compSelection = '';
+        click = 0;
+        winner = '';
+        reset();
+    });
 
     $('#rock').click(function () {
         if (click == 0) {
@@ -28,6 +41,9 @@ $(document).ready(function () {
             }
             setTimeout(function () {
                 click = 0;
+                if (playerScore == 5 || compScore == 5) {
+                    closeGame();
+                }
             }, 1500);
         }
     });
@@ -44,6 +60,9 @@ $(document).ready(function () {
             }
             setTimeout(function () {
                 click = 0;
+                if (playerScore == 5 || compScore == 5) {
+                    closeGame();
+                }
             }, 1500);
         }
     });
@@ -60,6 +79,9 @@ $(document).ready(function () {
             }
             setTimeout(function () {
                 click = 0;
+                if (playerScore == 5 || compScore == 5) {
+                    closeGame();
+                }
             }, 1500);
         }
     });
@@ -85,6 +107,7 @@ function hideForGame() {
     $('.comp-selection-rock').hide();
     $('.comp-selection-paper').hide();
     $('.comp-selection-scissors').hide();
+    $('#end').hide();
 };
 
 // Roll random selection for computer
@@ -193,8 +216,25 @@ function singleRound(p, c) {
     };
 };
 
-function checkGame(ps, cp) {
-    if (ps == 5 || cp == 5) {
+function closeGame() {
+    $('#container').slideUp('fast', function () {
+        if (playerScore == 5) {
+            winner = 'YOU';
+        } else {
+            winner = 'COMPUTER'
+        }
+        $('#end').slideDown('slow');
+        $('#endWinner').text('THE WINNER IS: ' + winner + '!');
+        $('#endScore').text('FINAL SCORE: YOU: ' + playerScore + ' | COMPUTER: ' + compScore);
+    });
+};
 
-    };
+function reset() {
+    $('#end').hide('fast', function() {
+        $('#container').slideDown('fast');
+        hideForGame();
+        $('p#results').text('');
+        $('p#score').text('');
+    });
+
 };

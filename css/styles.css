@@ -164,7 +164,29 @@ header h1 {
 }
 
 #score {
+    flex: 1;
     color: var(--first-light);
     text-align: center;
     margin: auto;
+}
+
+#end {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 25vh;
+}
+
+#endWinner, #endScore {
+    text-align: center;
+    margin: auto;
+}
+
+#startOver {
+    background-color: var(--first-light);
+    color: var(--first-dark);
+    margin: auto;
+    padding: 25px;
+    border: 3px solid var(--fourth-dark);
+    border-radius: 10px;
 }
