@@ -97,7 +97,7 @@ function selectRPS(s, t) {
     } else {
         $(t).show("slide", { direction: "down" }, 1000);
     }
-};
+}
 
 // Hide all selections until needed
 function hideForGame() {
@@ -108,7 +108,7 @@ function hideForGame() {
     $('.comp-selection-paper').hide();
     $('.comp-selection-scissors').hide();
     $('#end').hide();
-};
+}
 
 // Roll random selection for computer
 function computerPlay() {
@@ -148,7 +148,7 @@ function computerPlay() {
             }
             return '.comp-selection-scissors';
     }
-};
+}
 
 // Play a single round of RPS
 function singleRound(p, c) {
@@ -170,8 +170,8 @@ function singleRound(p, c) {
                 $('p#results').text('YOU SCORE');
                 $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
-        };
-    };
+        }
+    }
 
     if (p == '.player-selection-paper') {
         if (c == '.comp-selection-rock') {
@@ -191,8 +191,8 @@ function singleRound(p, c) {
                 $('p#results').text('COMPUTER SCORE');
                 $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
-        };
-    };
+        }
+    }
 
     if (p == '.player-selection-scissors') {
         if (c == '.comp-selection-rock') {
@@ -212,9 +212,9 @@ function singleRound(p, c) {
                 $('p#results').text('TIE');
                 $('p#score').text('YOUR SCORE: ' + playerScore + ' | COMPUTER SCORE: ' + compScore);
             }, 1100);
-        };
-    };
-};
+        }
+    }
+}
 
 function closeGame() {
     $('#container').slideUp('fast', function () {
@@ -227,7 +227,7 @@ function closeGame() {
         $('#endWinner').text('THE WINNER IS: ' + winner + '!');
         $('#endScore').text('FINAL SCORE: YOU: ' + playerScore + ' | COMPUTER: ' + compScore);
     });
-};
+}
 
 function reset() {
     $('#end').hide('fast', function () {
@@ -237,4 +237,4 @@ function reset() {
         $('p#score').text('');
     });
 
-};
+}
