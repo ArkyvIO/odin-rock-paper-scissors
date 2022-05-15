@@ -55,6 +55,7 @@ body {
 
 .divider {
     display: flex;
+    height: 5vh;
 }
 
 header {
@@ -78,10 +79,6 @@ header h1 {
 .compSelectImage {
     max-height: 30vh;
     margin: auto;
-}
-
-.divider {
-    height: 5vh;
 }
 
 #player-side {
